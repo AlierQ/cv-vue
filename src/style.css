@@ -6,11 +6,9 @@ body {
   background: #eee;
   margin: 20px 0;
   color: #333;
-  font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica,
-    "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB",
-    "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN",
-    "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti",
-    SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans",
+    "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei",
+    "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 }
 
 p {
@@ -57,26 +55,4 @@ article {
   margin: 0 auto;
   overflow: auto;
   padding: 1em;
-}
-
-.icon {
-  vertical-align: middle;
-}
-
-.point-icon > svg {
-  width: 10px;
-  height: 10px;
-  color: #254665;
-}
-
-.content-icon > svg {
-  width: 28px;
-  height: 28px;
-  color: #254665;
-}
-
-.top-icon > svg {
-  width: 18px;
-  height: 18px;
-  color: white;
 }
