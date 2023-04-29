@@ -1,89 +1,82 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background: #eee;
+  margin: 20px 0;
+  color: #333;
+  font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica,
+    "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB",
+    "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN",
+    "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti",
+    SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+}
+
+p {
+  margin: 0.5em 0;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 30px;
+  margin-bottom: 15px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+h2 {
+  color: rgb(37, 70, 101);
+  margin-bottom: 10px;
 }
 
-.card {
-  padding: 2em;
+a {
+  color: rgb(37, 70, 101);
+  text-decoration: none;
+  border-bottom: 2px solid rgb(4, 170, 109);
 }
 
-#app {
-  max-width: 1280px;
+strong {
+  color: rgb(4, 170, 109);
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+article {
+  width: 21cm;
+  min-height: 29.7cm;
+  background: white;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  overflow: auto;
+  padding: 1em;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.icon {
+  vertical-align: middle;
+}
+
+.point-icon > svg {
+  width: 10px;
+  height: 10px;
+  color: #254665;
+}
+
+.content-icon > svg {
+  width: 28px;
+  height: 28px;
+  color: #254665;
+}
+
+.top-icon > svg {
+  width: 18px;
+  height: 18px;
+  color: white;
 }
