@@ -13,6 +13,8 @@
     <Sections type="education" :datas="educationData" />
     <!-- 校内荣誉 -->
     <Sections type="honor" :datas="honorData" />
+    <!-- 其他链接 -->
+    <Sections :datas="otherData" />
   </article>
 </template>
 <script>
@@ -389,6 +391,49 @@ export default {
                 subTitle: "成果描述",
                 subContent: `
                 <li>实习结束获得优秀个人称号，所在小组获得实习优秀小组称号；</li>
+                `,
+              },
+            ],
+          },
+        ],
+      },
+      otherData: {
+        sectionTitle: "其他链接",
+        sectionIcon: "link",
+        sectionChildData: [
+          {
+            title: "AlierQ's Blog",
+            links: [
+              {
+                title: "个人博客地址",
+                url: "https://alierq.space/",
+              },
+            ],
+            content: [
+              {
+                subContent: `
+                <p>
+                  个人博客，用于记录日常工作中遇到的问题、学习中获得的心得体会。博客目前已有
+                  <strong> 30+ 篇技术文章</strong>
+                </p>
+                `,
+              },
+            ],
+          },
+          {
+            title: "Github",
+            links: [
+              {
+                title: "Github主页",
+                url: "https://github.com/AlierQ",
+              },
+            ],
+            content: [
+              {
+                subContent: `
+                <p>
+                  个人仓库，用来托管个人代码，平时做的Demo和项目都会放在上面。
+                </p>
                 `,
               },
             ],
