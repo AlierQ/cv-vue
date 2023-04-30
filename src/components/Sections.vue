@@ -2,7 +2,7 @@
   <section class="sections">
     <h2>
       <span class="icon content-icon">
-        <component :is="datas.sectionIcon" />
+        <component :is="'icon-' + datas.sectionIcon" />
       </span>
       {{ datas.sectionTitle }}
     </h2>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { ApplicationOne } from "@icon-park/vue-next";
+// import * as icons from "@icon-park/vue-next";
 import SubSections from "./SubSections.vue";
 export default {
   props: {
@@ -25,7 +25,7 @@ export default {
     return {};
   },
   components: {
-    ApplicationOne,
+    // ...icons,
     SubSections,
   },
   mounted() {},
