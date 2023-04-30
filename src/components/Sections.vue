@@ -21,6 +21,9 @@
     <template v-else-if="type === 'honor'">
       <SubSections :datas="datas.sectionChildData" :type="type"></SubSections>
     </template>
+    <template v-else-if="type === 'skill'">
+      <SubSections :datas="datas.sectionChildData" :type="type"></SubSections>
+    </template>
   </section>
 </template>
 

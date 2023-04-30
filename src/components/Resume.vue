@@ -3,6 +3,8 @@
   <article>
     <!-- 个人资料 -->
     <Bio :datas="personalData" />
+    <!-- 技能特长 -->
+    <Sections type="skill" :datas="skillsData" />
     <!-- 工作经历 -->
     <Sections type="job" :datas="jobData" />
     <!-- 项目经历 -->
@@ -20,10 +22,10 @@
 <script>
 import Bio from "./Bio.vue";
 import Sections from "./Sections.vue";
-import SubSections from "./SubSections.vue";
 export default {
   data() {
     return {
+      // 个人信息数据
       personalData: {
         name: "汪鸿",
         sex: "男",
@@ -36,6 +38,7 @@ export default {
         email: "1029369938@qq.com",
         entryTime: "在职 - 月内到岗",
       },
+      // 项目经历数据
       projectsData: {
         sectionTitle: "项目经历",
         sectionIcon: "application-one",
@@ -252,6 +255,7 @@ export default {
           },
         ],
       },
+      // 开源经历数据
       openSourceData: {
         sectionTitle: "开源项目",
         sectionIcon: "github-one",
@@ -322,6 +326,7 @@ export default {
           },
         ],
       },
+      // 教育经历数据
       educationData: {
         sectionTitle: "教育经历",
         sectionIcon: "school",
@@ -335,6 +340,7 @@ export default {
           },
         ],
       },
+      // 校内荣誉数据
       honorData: {
         sectionTitle: "校内荣誉",
         sectionIcon: "trophy",
@@ -354,6 +360,7 @@ export default {
           "2021.06 院级-燕山大学里仁学院优秀毕业生",
         ],
       },
+      // 工作经历数据
       jobData: {
         sectionTitle: "工作经历",
         sectionIcon: "handbag",
@@ -409,6 +416,20 @@ export default {
           },
         ],
       },
+      skillsData: {
+        sectionTitle: "技能特长",
+        sectionIcon: "trophy",
+        sectionChildData: [
+          `熟练制作静态页面，能<strong>高度还原</strong>设计稿`,
+          `熟练掌握 <strong>Vue全家桶</strong>的使用，包括
+              VueCli、Vuex、VueRouter 等。`,
+          `熟悉<strong>前后端分离技术</strong>，包括
+              AJAX、跨域、前端路由、Cookie、Session 等。`,
+          `熟悉 <strong>ES6语法</strong>，包括 let / Promise / 析构赋值 等。`,
+          `了解 <strong>TypeScript</strong> 的使用，项目尽可能的都使用ts。`,
+        ],
+      },
+      // 其他链接数据
       otherData: {
         sectionTitle: "其他链接",
         sectionIcon: "link",
@@ -457,7 +478,6 @@ export default {
   components: {
     Bio,
     Sections,
-    SubSections,
   },
 };
 </script>

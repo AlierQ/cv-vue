@@ -52,6 +52,21 @@
       </ol>
     </div>
   </template>
+  <template v-else-if="type === 'skill'">
+    <ul class="skill">
+      <li v-for="(item, index) in datas" :key="index">
+        <span class="icon point-icon" style="margin-right: 5px">
+          <component
+            :is="'icon-hexagon-strip'"
+            theme="filled"
+            size="10"
+            fill="#254665"
+          />
+        </span>
+        <span v-html="item"></span>
+      </li>
+    </ul>
+  </template>
 </template>
 
 <script>
@@ -137,5 +152,19 @@ p {
 .job span {
   color: #666;
   font-size: 18px;
+}
+
+.skill {
+  padding-left: 10px;
+}
+
+.skill > li {
+  display: flex;
+  padding: 5px 0;
+  color: #666;
+}
+.skill > li {
+  padding: 5px 0;
+  color: #666;
 }
 </style>
