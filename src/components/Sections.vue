@@ -6,27 +6,38 @@
       </span>
       {{ datas.sectionTitle }}
     </h2>
-    <ol>
-      <li v-for="(item, index) in datas.sectionChildData" :key="index">
+    <template v-if="type === 'ordinary'">
+      <ol>
+        <li v-for="(item, index) in datas.sectionChildData" :key="index">
+          <SubSections :datas="item" :type="type"></SubSections>
+        </li>
+      </ol>
+    </template>
+    <template v-else-if="type === 'education'">
+      <template v-for="(item, index) in datas.sectionChildData" :key="index">
         <SubSections :datas="item" :type="type"></SubSections>
-      </li>
-    </ol>
+      </template>
+    </template>
+    <template v-else-if="type === 'honor'">
+      <SubSections :datas="datas.sectionChildData" :type="type"></SubSections>
+    </template>
   </section>
 </template>
 
 <script>
-// import * as icons from "@icon-park/vue-next";
 import SubSections from "./SubSections.vue";
 export default {
   props: {
     datas: Object,
-    type: String,
+    type: {
+      type: String,
+      default: "ordinary",
+    },
   },
   data() {
     return {};
   },
   components: {
-    // ...icons,
     SubSections,
   },
   mounted() {},

@@ -31,16 +31,39 @@
       <span>{{ datas.degree }}</span>
     </p>
   </template>
+  <template v-else-if="type === 'honor'">
+    <div class="honor-list">
+      <ol>
+        <li v-for="(item, index) in leftList" :key="index">{{ item }}</li>
+      </ol>
+      <ol>
+        <li v-for="(item, index) in rightList" :key="index">{{ item }}</li>
+      </ol>
+    </div>
+  </template>
 </template>
 
 <script>
 export default {
   props: {
-    datas: Object,
+    datas: [Array, Object],
     type: {
       type: String,
       default: "ordinary",
     },
+  },
+  data() {
+    return {
+      leftList: [],
+      rightList: [],
+    };
+  },
+  created() {
+    if (this.type === "honor") {
+      let index = Math.ceil(this.datas.length / 2);
+      this.leftList = this.datas.slice(0, index);
+      this.rightList = this.datas.slice(index);
+    }
   },
 };
 </script>
@@ -56,7 +79,8 @@ header > h3 {
 em {
   font-weight: 600;
 }
-p {
+p,
+div {
   color: #666;
 }
 .link a {
@@ -70,8 +94,19 @@ p {
   display: flex;
   justify-content: space-between;
 }
-
 .education p > span {
   line-height: 16px;
+}
+.honor-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.honor-list > ol {
+  padding: 0;
+}
+
+.honor-list > ol > li {
+  padding: 2px 0;
 }
 </style>
