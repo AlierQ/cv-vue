@@ -21,7 +21,10 @@
           <h3>{{ datas.name }}</h3>
           <span> {{ datas.note }} </span>
         </div>
-        <span><time>2020年11月</time>~<time>2020年12月</time></span>
+        <span
+          ><time>{{ datas.beginTime }}</time> 至
+          <time>{{ datas.endTime }}</time></span
+        >
       </header>
     </template>
     <template v-for="(item, index) in datas.content" :key="index">
@@ -155,7 +158,7 @@ p {
 }
 
 .skill {
-  padding-left: 10px;
+  padding-left: 0px;
 }
 
 .skill > li {
@@ -166,5 +169,51 @@ p {
 .skill > li {
   padding: 5px 0;
   color: #666;
+}
+
+@media (max-width: 500px) {
+  .education {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+
+  .education > span {
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .education > span:nth-of-type(1),
+  .education > span:nth-of-type(2) {
+    margin-bottom: 10px;
+  }
+
+  .education > span:nth-of-type(2),
+  .education > span:nth-of-type(4) {
+    flex-grow: 1;
+    text-align: right;
+  }
+  .job > div > span {
+    padding-top: 8px;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .job > span {
+    padding-top: 4px;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  .job > div {
+    display: block;
+    flex: 1;
+  }
+
+  .honor-list {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

@@ -368,8 +368,8 @@ export default {
           {
             name: "上海海同科技有限公司",
             note: "校内实习",
-            beginTime: "2020年09月",
-            endTime: "2020年10月",
+            beginTime: "2020.09",
+            endTime: "2020.10",
             content: [
               {
                 subTitle: "工作描述",
@@ -393,8 +393,8 @@ export default {
           {
             name: "武汉软酷有限公司",
             note: "校内实习",
-            beginTime: "2020年11月",
-            endTime: "2020年12月",
+            beginTime: "2020.11",
+            endTime: "2020.12",
             content: [
               {
                 subTitle: "工作描述",

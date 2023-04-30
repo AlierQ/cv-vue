@@ -7,7 +7,7 @@
     <p>
       {{ datas.sex }} &nbsp;|&nbsp; {{ datas.age }}岁 &nbsp;|&nbsp;
       {{ datas.nation }} &nbsp;|&nbsp; {{ datas.politicalStatus }} &nbsp;|&nbsp;
-      {{ datas.jobPost }} &nbsp;|&nbsp; {{ datas.entryTime }}
+      {{ datas.jobPost }}
     </p>
     <p>
       <span class="icon">
@@ -22,6 +22,9 @@
         <mail :theme="iconTheme" :size="iconSize" :fill="iconFill" />
       </span>
       <a :href="'mailto:' + datas.email">{{ datas.email }}</a>
+    </p>
+    <p>
+      {{ datas.entryTime }}
     </p>
   </section>
 </template>
@@ -77,5 +80,26 @@ a {
   width: 100%;
 }
 
+@media (max-width: 500px) {
+  .bio {
+    padding: 0 10px 10px 10px;
+  }
+
+  .bio > .img {
+    display: none;
+  }
+
+  .bio > p {
+    font-size: 14px;
+  }
+  .bio > p:nth-of-type(1) {
+    font-size: 14px;
+  }
+
+  .bio > p:nth-of-type(2) {
+    font-size: 13px;
+    vertical-align: middle;
+  }
+}
 /* bio end */
 </style>
