@@ -5,16 +5,24 @@
       <img src="../assets/images/avatar.JPG" alt="" />
     </div>
     <p>
-      {{ personalInfo.sex }} &nbsp;|&nbsp; {{ personalInfo.age }}岁 &nbsp;|&nbsp;
-      {{ personalInfo.nation }} &nbsp;|&nbsp; {{ personalInfo.politicalStatus }} &nbsp;|&nbsp;
+      {{ personalInfo.sex }} &nbsp;|&nbsp; {{ personalInfo.age }}岁
+      &nbsp;|&nbsp; {{ personalInfo.nation }} &nbsp;|&nbsp;
+      {{ personalInfo.politicalStatus }} &nbsp;|&nbsp;
       {{ personalInfo.jobPost }}
     </p>
     <p>
-      <span class="icon"> <phone-call :theme="iconTheme" :size="iconSize" :fill="iconFill" /> </span>
-      <a :href="'tel:' + personalInfo.tel"> {{ personalInfo.tel }} </a>&nbsp;|&nbsp;
-      <span class="icon"> <wechat :theme="iconTheme" :size="iconSize" :fill="iconFill" /> </span>
+      <span class="icon">
+        <phone-call :theme="iconTheme" :size="iconSize" :fill="iconFill" />
+      </span>
+      <a :href="'tel:' + personalInfo.tel"> {{ personalInfo.tel }} </a
+      >&nbsp;|&nbsp;
+      <span class="icon">
+        <wechat :theme="iconTheme" :size="iconSize" :fill="iconFill" />
+      </span>
       {{ personalInfo.wechat }} &nbsp;|&nbsp;
-      <span class="icon"> <mail :theme="iconTheme" :size="iconSize" :fill="iconFill" /> </span>
+      <span class="icon">
+        <mail :theme="iconTheme" :size="iconSize" :fill="iconFill" />
+      </span>
       <a :href="'mailto:' + personalInfo.email">{{ personalInfo.email }}</a>
     </p>
   </section>
