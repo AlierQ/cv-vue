@@ -8,7 +8,7 @@
     </h2>
     <ol>
       <li v-for="(item, index) in datas.sectionChildData" :key="index">
-        <SubSections :datas="item"></SubSections>
+        <SubSections :datas="item" :type="type"></SubSections>
       </li>
     </ol>
   </section>
@@ -20,6 +20,7 @@ import SubSections from "./SubSections.vue";
 export default {
   props: {
     datas: Object,
+    type: String,
   },
   data() {
     return {};
