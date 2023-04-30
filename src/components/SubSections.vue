@@ -1,18 +1,29 @@
 <template>
-  <template v-if="type === 'ordinary'">
-    <header>
-      <h3>{{ datas.title }}</h3>
-      <span class="link">
-        <a
-          target="_blank"
-          v-for="(item, index) in datas.links"
-          :key="index"
-          :href="item.url"
-        >
-          {{ item.title }}
-        </a>
-      </span>
-    </header>
+  <template v-if="type === 'ordinary' || type === 'job'">
+    <template v-if="type === 'ordinary'">
+      <header>
+        <h3>{{ datas.title }}</h3>
+        <span class="link">
+          <a
+            target="_blank"
+            v-for="(item, index) in datas.links"
+            :key="index"
+            :href="item.url"
+          >
+            {{ item.title }}
+          </a>
+        </span>
+      </header>
+    </template>
+    <template v-else-if="type === 'job'">
+      <header class="job">
+        <div>
+          <h3>{{ datas.name }}</h3>
+          <span> {{ datas.note }} </span>
+        </div>
+        <span><time>2020年11月</time>~<time>2020年12月</time></span>
+      </header>
+    </template>
     <template v-for="(item, index) in datas.content" :key="index">
       <p v-if="item.subTitle">
         <em>{{ item.subTitle }}：</em>
@@ -46,7 +57,7 @@
 <script>
 export default {
   props: {
-    datas: [Array, Object],
+    datas: [Object, Array],
     type: {
       type: String,
       default: "ordinary",
@@ -79,8 +90,7 @@ header > h3 {
 em {
   font-weight: 600;
 }
-p,
-div {
+p {
   color: #666;
 }
 .link a {
@@ -98,6 +108,7 @@ div {
   line-height: 16px;
 }
 .honor-list {
+  color: #666;
   display: flex;
   justify-content: space-between;
 }
@@ -108,5 +119,23 @@ div {
 
 .honor-list > ol > li {
   padding: 2px 0;
+}
+
+.job {
+  display: flex;
+  justify-content: space-between;
+}
+
+.job > div {
+  display: flex;
+}
+
+.job > div > h3 {
+  margin-right: 18px;
+}
+
+.job span {
+  color: #666;
+  font-size: 18px;
 }
 </style>

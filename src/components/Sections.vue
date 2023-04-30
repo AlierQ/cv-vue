@@ -6,8 +6,8 @@
       </span>
       {{ datas.sectionTitle }}
     </h2>
-    <template v-if="type === 'ordinary'">
-      <ol>
+    <template v-if="type === 'ordinary' || type === 'job'">
+      <ol :class="{ job: type === 'job' }">
         <li v-for="(item, index) in datas.sectionChildData" :key="index">
           <SubSections :datas="item" :type="type"></SubSections>
         </li>
@@ -54,5 +54,14 @@ export default {
 }
 .sections > ol > li {
   margin-bottom: 16px;
+}
+
+.job > li > ul {
+  color: #666666;
+  padding: 10px 0;
+}
+
+.job > li > ul > li {
+  padding: 2px 0;
 }
 </style>

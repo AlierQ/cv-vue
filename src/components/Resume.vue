@@ -3,6 +3,8 @@
   <article>
     <!-- 个人资料 -->
     <Bio />
+    <!-- 工作经历 -->
+    <Sections type="job" :datas="jobData" />
     <!-- 项目经历 -->
     <Sections :datas="projectsData" />
     <!-- 开源项目 -->
@@ -336,6 +338,61 @@ export default {
           "2020.05 国家级-国家励志奖学金",
           "2021.06 院级-燕山大学里仁学院优秀毕业生",
           "2021.06 院级-燕山大学里仁学院优秀毕业生",
+        ],
+      },
+      jobData: {
+        sectionTitle: "工作经历",
+        sectionIcon: "handbag",
+        sectionChildData: [
+          {
+            name: "上海海同科技有限公司",
+            note: "校内实习",
+            beginTime: "2020年09月",
+            endTime: "2020年10月",
+            content: [
+              {
+                subTitle: "工作描述",
+                subContent: `
+                <li>
+                分析应用需求，对相应的页面进行组件化的拆分，并使用 Vue-cli
+                进行项目构建；
+                </li>
+                <li>使用 Axios 向后端发送和请求数据；</li>
+                <li>使用 SpringBoot 编写业务逻辑操作 MySQL 数据库；</li>
+                `,
+              },
+              {
+                subTitle: "成果描述",
+                subContent: `
+                <li>实习结束获得优秀个人称号，所在小组获得实习优秀小组称号；</li>
+                `,
+              },
+            ],
+          },
+          {
+            name: "武汉软酷有限公司",
+            note: "校内实习",
+            beginTime: "2020年11月",
+            endTime: "2020年12月",
+            content: [
+              {
+                subTitle: "工作描述",
+                subContent: `
+                <li>
+                分析项目业务，设计前端页面模块，使用 React 进行项目前端开发；
+                </li>
+                <li>使用 Echarts 图表进行股票数据的展示；</li>
+                <li>使用 SpringBoot 编写业务逻辑操作 MySQL 数据库；</li>
+                `,
+              },
+              {
+                subTitle: "成果描述",
+                subContent: `
+                <li>实习结束获得优秀个人称号，所在小组获得实习优秀小组称号；</li>
+                `,
+              },
+            ],
+          },
         ],
       },
     };
