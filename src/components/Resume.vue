@@ -2,7 +2,7 @@
 <template>
   <article>
     <!-- 个人资料 -->
-    <Bio />
+    <Bio :datas="personalData" />
     <!-- 工作经历 -->
     <Sections type="job" :datas="jobData" />
     <!-- 项目经历 -->
@@ -24,6 +24,18 @@ import SubSections from "./SubSections.vue";
 export default {
   data() {
     return {
+      personalData: {
+        name: "汪鸿",
+        sex: "男",
+        age: "25",
+        nation: "汉族",
+        politicalStatus: "中共党员",
+        jobPost: "前端工程师",
+        tel: "13191818522",
+        wechat: "xxccze",
+        email: "1029369938@qq.com",
+        entryTime: "在职 - 月内到岗",
+      },
       projectsData: {
         sectionTitle: "项目经历",
         sectionIcon: "application-one",

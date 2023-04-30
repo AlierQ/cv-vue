@@ -1,29 +1,27 @@
 <template>
   <section class="bio">
-    <h1>{{ personalInfo.name }}</h1>
+    <h1>{{ datas.name }}</h1>
     <div class="img">
       <img src="../assets/images/avatar.JPG" alt="" />
     </div>
     <p>
-      {{ personalInfo.sex }} &nbsp;|&nbsp; {{ personalInfo.age }}岁
-      &nbsp;|&nbsp; {{ personalInfo.nation }} &nbsp;|&nbsp;
-      {{ personalInfo.politicalStatus }} &nbsp;|&nbsp;
-      {{ personalInfo.jobPost }}
+      {{ datas.sex }} &nbsp;|&nbsp; {{ datas.age }}岁 &nbsp;|&nbsp;
+      {{ datas.nation }} &nbsp;|&nbsp; {{ datas.politicalStatus }} &nbsp;|&nbsp;
+      {{ datas.jobPost }} &nbsp;|&nbsp; {{ datas.entryTime }}
     </p>
     <p>
       <span class="icon">
         <phone-call :theme="iconTheme" :size="iconSize" :fill="iconFill" />
       </span>
-      <a :href="'tel:' + personalInfo.tel"> {{ personalInfo.tel }} </a
-      >&nbsp;|&nbsp;
+      <a :href="'tel:' + datas.tel"> {{ datas.tel }} </a>&nbsp;|&nbsp;
       <span class="icon">
         <wechat :theme="iconTheme" :size="iconSize" :fill="iconFill" />
       </span>
-      {{ personalInfo.wechat }} &nbsp;|&nbsp;
+      {{ datas.wechat }} &nbsp;|&nbsp;
       <span class="icon">
         <mail :theme="iconTheme" :size="iconSize" :fill="iconFill" />
       </span>
-      <a :href="'mailto:' + personalInfo.email">{{ personalInfo.email }}</a>
+      <a :href="'mailto:' + datas.email">{{ datas.email }}</a>
     </p>
   </section>
 </template>
@@ -32,19 +30,9 @@
 import { PhoneCall, Wechat, Mail } from "@icon-park/vue-next";
 export default {
   name: "Bio",
+  props: ["datas"],
   data() {
     return {
-      personalInfo: {
-        name: "汪鸿",
-        sex: "男",
-        age: "25",
-        nation: "汉族",
-        politicalStatus: "中共党员",
-        jobPost: "前端工程师",
-        tel: "13191818522",
-        wechat: "xxccze",
-        email: "1029369938@qq.com",
-      },
       iconTheme: "outline",
       iconSize: 18,
       iconFill: "#ffffff",
