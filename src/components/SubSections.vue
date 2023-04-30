@@ -22,7 +22,7 @@
           <span> {{ datas.note }} </span>
         </div>
         <span
-          ><time>{{ datas.beginTime }}</time> 至
+          ><time>{{ datas.beginTime }}</time> —
           <time>{{ datas.endTime }}</time></span
         >
       </header>

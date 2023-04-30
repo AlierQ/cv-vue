@@ -44,6 +44,39 @@ export default {
         sectionIcon: "application-one",
         sectionChildData: [
           {
+            title: "新一代柜面系统",
+            content: [
+              {
+                subTitle: "项目描述",
+                subContent: `
+                <p>
+                  一款中信银行主导开发的基于 <strong>Vue2</strong> / VueRouter /
+                  <strong>Element UI</strong> / Scss 开发，使用
+                  <strong>Webpack</strong> 构建的银行柜面系统。
+                </p>
+                <p>
+                  新一代柜面系统摒弃了老柜面系统前后端一体的开发模式，采取了前后段分离的新开发模式，使得新柜面开发更加敏捷高效、维护更加省心省力；新一代柜面系统由交易组成，交易与交易在业务上相互关联，在技术实现上相互独立；通过连接
+                  柜外清、高拍仪等外设，再公共影像平台的OCR识别技术等，可以使得柜员轻松完成对公业务办理、对私业务办理以及凭证无纸化等操作。
+                </p>
+                `,
+              },
+              {
+                subTitle: "项目经验",
+                subContent: `
+                <p>
+                  系统性的了解了<strong>企业级应用</strong>的开发流程，参与项目初期的部分功能设计，制定相应的前端开发规范。
+                </p>
+                <p>
+                  柜面系统中使用 <strong>Vue2</strong> + <strong>ElementUI</strong> 进行开发，提高了对于 Vue2 熟练程度以及 UI 组件的了解程度和掌握程度。
+                </p>
+                <p>
+                  柜面系统使用不少业务逻辑有所共同，需要封装公共组件，这使得我对于组件的封装能力也有所提高。
+                </p>
+                `,
+              },
+            ],
+          },
+          {
             title: "One UI 组件库",
             links: [
               {
@@ -98,7 +131,7 @@ export default {
             ],
           },
           {
-            title: "薄荷流水（Vue版本）",
+            title: "薄荷流水-记账App",
             links: [
               {
                 title: "源码链接",
@@ -153,49 +186,49 @@ export default {
               },
             ],
           },
-          {
-            title: "薄荷流水（React版本）",
-            links: [
-              {
-                title: "源码链接",
-                url: "https://gitee.com/AlierQ/Mint-react",
-              },
-              {
-                title: "项目预览",
-                url: "https://alierq.space/mint-react/",
-              },
-            ],
-            content: [
-              {
-                subTitle: "项目描述",
-                subContent: `
-                <p>
-                  一款基于 <strong>React</strong> / ReactRouter / TypeScript / Scss
-                  开发，使用
-                  <strong>create-react-app</strong> 构建的本地移动端记账WebApp。
-                </p>
-                <p>
-                  该项目和上述的 Vue
-                  版本采用同一个界面样式，并且具有同样的功能，不同之处是这个项目是基于React的进行开发的。
-                </p>
-                `,
-              },
-              {
-                subTitle: "项目经验",
-                subContent: `
-                <p>
-                  做这个项目的初衷是在学习完 React 之后，想要尝试能不能将一个 Vue
-                  应用移植成一个React应用，从而比较一下，在实现相同的功能时两者的不同，从而希望加深我的对二者的理解和认识。
-                </p>
-                <p>
-                  项目中使用React的一些常见的Hooks
-                  API，如useState、useEffect、useRef，并且还在这些 Hooks
-                  的基础之上封装了自定义Hook。
-                </p>
-                `,
-              },
-            ],
-          },
+          // {
+          //   title: "薄荷流水（React版本）",
+          //   links: [
+          //     {
+          //       title: "源码链接",
+          //       url: "https://gitee.com/AlierQ/Mint-react",
+          //     },
+          //     {
+          //       title: "项目预览",
+          //       url: "https://alierq.space/mint-react/",
+          //     },
+          //   ],
+          //   content: [
+          //     {
+          //       subTitle: "项目描述",
+          //       subContent: `
+          //       <p>
+          //         一款基于 <strong>React</strong> / ReactRouter / TypeScript / Scss
+          //         开发，使用
+          //         <strong>create-react-app</strong> 构建的本地移动端记账WebApp。
+          //       </p>
+          //       <p>
+          //         该项目和上述的 Vue
+          //         版本采用同一个界面样式，并且具有同样的功能，不同之处是这个项目是基于React的进行开发的。
+          //       </p>
+          //       `,
+          //     },
+          //     {
+          //       subTitle: "项目经验",
+          //       subContent: `
+          //       <p>
+          //         做这个项目的初衷是在学习完 React 之后，想要尝试能不能将一个 Vue
+          //         应用移植成一个React应用，从而比较一下，在实现相同的功能时两者的不同，从而希望加深我的对二者的理解和认识。
+          //       </p>
+          //       <p>
+          //         项目中使用React的一些常见的Hooks
+          //         API，如useState、useEffect、useRef，并且还在这些 Hooks
+          //         的基础之上封装了自定义Hook。
+          //       </p>
+          //       `,
+          //     },
+          //   ],
+          // },
           {
             title: "在线云笔记",
             links: [
@@ -357,7 +390,6 @@ export default {
           "2020.04 院级-燕山大学里仁学院二等奖学金",
           "2020.05 国家级-国家励志奖学金",
           "2021.06 院级-燕山大学里仁学院优秀毕业生",
-          "2021.06 院级-燕山大学里仁学院优秀毕业生",
         ],
       },
       // 工作经历数据
@@ -366,67 +398,37 @@ export default {
         sectionIcon: "handbag",
         sectionChildData: [
           {
-            name: "上海海同科技有限公司",
-            note: "校内实习",
-            beginTime: "2020.09",
-            endTime: "2020.10",
+            name: "北京兴融信息技术有限公司",
+            note: "前端工程师",
+            beginTime: "2021.09",
+            endTime: "至今",
             content: [
               {
-                subTitle: "工作描述",
+                subTitle: "",
                 subContent: `
-                <li>
-                分析应用需求，对相应的页面进行组件化的拆分，并使用 Vue-cli
-                进行项目构建；
-                </li>
-                <li>使用 Axios 向后端发送和请求数据；</li>
-                <li>使用 SpringBoot 编写业务逻辑操作 MySQL 数据库；</li>
-                `,
-              },
-              {
-                subTitle: "成果描述",
-                subContent: `
-                <li>实习结束获得优秀个人称号，所在小组获得实习优秀小组称号；</li>
-                `,
-              },
-            ],
-          },
-          {
-            name: "武汉软酷有限公司",
-            note: "校内实习",
-            beginTime: "2020.11",
-            endTime: "2020.12",
-            content: [
-              {
-                subTitle: "工作描述",
-                subContent: `
-                <li>
-                分析项目业务，设计前端页面模块，使用 React 进行项目前端开发；
-                </li>
-                <li>使用 Echarts 图表进行股票数据的展示；</li>
-                <li>使用 SpringBoot 编写业务逻辑操作 MySQL 数据库；</li>
-                `,
-              },
-              {
-                subTitle: "成果描述",
-                subContent: `
-                <li>实习结束获得优秀个人称号，所在小组获得实习优秀小组称号；</li>
+                <li>负责中信银行新一代柜面系统前端开发；</li>
+                <li>根据业务需求，编写相应交易的前端静态页面及业务逻辑；</li>
+                <li>参与新柜面系统部分功能设计，协同撰写新柜面前端开发规范；</li>
+                <li>协同项目组内小伙伴共同按质按量完成项目需求；</li>
                 `,
               },
             ],
           },
         ],
       },
+      // 技能特长数据
       skillsData: {
         sectionTitle: "技能特长",
         sectionIcon: "trophy",
         sectionChildData: [
-          `熟练制作静态页面，能<strong>高度还原</strong>设计稿`,
+          `熟练制作静态页面，能够使用 HTML + CSS <strong>高度还原</strong>设计稿`,
           `熟练掌握 <strong>Vue全家桶</strong>的使用，包括
               VueCli、Vuex、VueRouter 等。`,
           `熟悉<strong>前后端分离技术</strong>，包括
               AJAX、跨域、前端路由、Cookie、Session 等。`,
           `熟悉 <strong>ES6语法</strong>，包括 let / Promise / 析构赋值 等。`,
           `了解 <strong>TypeScript</strong> 的使用，项目尽可能的都使用ts。`,
+          `了解 <strong>Webpack</strong>、<strong>Vite</strong>、<strong>Parcel</strong>等打包工具的使用。`,
         ],
       },
       // 其他链接数据
@@ -465,7 +467,7 @@ export default {
               {
                 subContent: `
                 <p>
-                  个人仓库，用来托管个人代码，平时做的Demo和项目都会放在上面。
+                  个人仓库，用来托管个人代码，平时做的Demo和项目都会放在上面。至今已有 <strong> 600+ 提交</strong>
                 </p>
                 `,
               },
